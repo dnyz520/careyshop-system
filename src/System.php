@@ -11,5 +11,9 @@ class System
      */
     public static function loadFunction()
     {
+        $appFunction = app_path() . 'function.php';
+        if (is_file($appFunction)) {
+            include_once $appFunction;
+        }
     }
 }
